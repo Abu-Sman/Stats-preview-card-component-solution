@@ -1,0 +1,265 @@
+/*********************/
+/* GENERAL STYLES */
+/*********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+main {
+  background-color: #090b1a;
+  max-width: 150rem;
+  height: 80rem;
+  margin: 7rem auto;
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-preview-card-component {
+  background-color: #1b1938;
+  max-width: 100rem;
+  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text-box {
+  min-width: 0;
+  padding: 6.4rem;
+  padding-right: 9.6rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.title span {
+  color: #aa5cdb;
+}
+
+.description {
+  font-size: 1.4rem;
+  color: #ffffffbf;
+  line-height: 1.8;
+  margin-bottom: 6.4rem;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+}
+
+.label {
+  font-size: 1rem;
+  color: #ffffff99;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #aa5cdb;
+  mix-blend-mode: multiply;
+  position: absolute;
+}
+
+.stats-img {
+  display: block;
+  width: 100%;
+}
+
+/*********************/
+/* MEDIA QUERIES */
+/*********************/
+/* FOR DESKTOP: 1520PX */
+@media (max-width: 95em) {
+  main {
+    height: 100vh;
+    margin: 0 auto;
+  }
+}
+
+/* FOR TABLET: 1200PX */
+@media (max-width: 75em) {
+  .stats-preview-card-component {
+    max-width: 80rem;
+  }
+
+  .text-box {
+    padding: 4.8rem;
+    padding-right: 6.4rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .stats {
+    gap: 3rem;
+  }
+
+  .stat {
+    gap: 0.5rem;
+  }
+
+  .number {
+    font-size: 1.6rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+}
+
+/* FOR MINI-TABLET: 864PX */
+@media (max-width: 54em) {
+  .stats-preview-card-component {
+    max-width: 65rem;
+  }
+
+  .text-box {
+    padding: 3.2rem;
+    padding-right: 4.8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .number {
+    font-size: 1.4rem;
+  }
+
+  .label {
+    font-size: 0.7rem;
+  }
+}
+
+/* FOR SMALL TABLET: 672PX */
+@media (max-width: 42em) {
+  .stats-preview-card-component {
+    grid-template-columns: 1fr;
+    max-width: 32rem;
+  }
+
+  .text-box {
+    text-align: center;
+    padding: 3.2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .img-box {
+    grid-row: 1;
+  }
+}
+
+/* FOR MOBILES: 448PX */
+@media (max-width: 28em) {
+  main {
+    height: 100rem;
+  }
+
+  .text-box {
+    padding: 3.2rem 2.4rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .description {
+    font-size: 1.6rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .stat {
+    gap: 1rem;
+  }
+
+  .number {
+    font-size: 2.4rem;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+}
